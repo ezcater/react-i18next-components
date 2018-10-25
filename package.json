@@ -1,0 +1,19 @@
+{
+  "name": "react-i18next-components",
+  "version": "0.0.1",
+  "description": "A collection of React components and utilities to simplify react-i18next",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ezcater/react-i18next-components.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ezcater/react-i18next-components/issues"
+  },
+  "homepage": "https://github.com/ezcater/react-i18next-components#readme"
+}
