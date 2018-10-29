@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/ezcater/react-i18next-components/issues"
   },
-  "homepage": "https://github.com/ezcater/react-i18next-components#readme"
+  "homepage": "https://github.com/ezcater/react-i18next-components#readme",
+  "peerDependencies": {
+    "react": "^16.0.0",
+    "i18next": "^2.0.0",
+    "react-i18next": "^8.0.0"
+  }
 }
