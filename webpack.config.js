@@ -30,11 +30,10 @@ module.exports = {
   resolve: {
     alias: {
       'react': path.resolve(__dirname, './node_modules/react'),
-      'react-dom': path.resolve(__dirname, './node_modules/react-dom')
+      'react-dom': path.resolve(__dirname, './node_modules/react-dom'),  
     }
   },
   externals: {
-    // Don't bundle react or react-dom
     react: {
       commonjs: "react",
       commonjs2: "react",
