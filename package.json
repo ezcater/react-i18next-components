@@ -4,7 +4,7 @@
   "description": "A collection of React components and utilities to simplify react-i18next",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
