@@ -14,10 +14,10 @@ const FormattedMessage = ({ t, id, options, children }) => {
   const translation = getTranslation({ t, id, options });
 
   if(isRenderProp) {
-    children(translation)
+    return children(translation)
   }
 
-  return <React.Fragment>{translation}</React.Fragment>;
+  return <span>{translation}</span>;
 }
 
 const FormattedMessageWrapper = withNamespaces()(FormattedMessage);
