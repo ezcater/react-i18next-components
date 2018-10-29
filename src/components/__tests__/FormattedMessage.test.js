@@ -1,6 +1,6 @@
 import React from 'react';
 import {mount} from 'enzyme';
-import FormattedMessage from '../FormattedMessage';
+import FormattedMessage from '../components/FormattedMessage';
 import mockI18nextWithValue from '../../test/mockI18nextWithValue';
 
 const MOCKED_RETURN_VALUE = 'hello';
