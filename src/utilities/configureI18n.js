@@ -5,9 +5,9 @@ const missingKeyHandler = (_lng, _ns, key) => {
   throw new Error(`Missing translation: ${key}`);
 };
 
-const configureI18n = ({ resources, lng = 'en' }) => {
+const configureI18n = ({ resources, lng, fallbackLng }) => {
   return i18n.use(reactI18nextModule).init({
-    fallbackLng: 'en',
+    fallbackLng,
     lng,
     missingKeyHandler,
     resources,

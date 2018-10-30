@@ -54,3 +54,72 @@ import FormattedMessage from 'react-i18next-components';
   )}
 </FormattedMessage>
 ```
+
+## Contributing
+
+### Install locally:
+
+This will install all dependencies and linting hooks.
+
+```
+npm install
+```
+
+### Run tests:
+
+We use a Jest test runner with enzyme.
+
+```
+npm test
+```
+
+### Run locally:
+
+Running this will spin up a local webpack server that watches for changes and will automatically rebuild the project for you.
+
+```
+npm start
+```
+
+### Run locally against another project:
+
+1. Navigate into your application and make sure all existing depdencies are installed.
+
+```sh
+cd my-app
+npm install
+```
+
+2. Link the local version of the library to your application so that npm points to your local version rather than the app's `node_modules` folder.
+
+```sh
+npm link ../path/to/react-i18next-components
+```
+
+3. Add the library to your apps dependency list in it's `package.json`, the version number should reflect the version in your local version of the library. Note, attempting to run `npm install` at this point may fail if the added version hasn't been published to the npm repository.
+
+```js
+// ...
+dependencies: {
+  "i18next-react-components": "1.0.0",
+}
+// ...
+```
+
+4. Import the components you want to test in your app.
+
+```jsx
+import { FormattedMessage } from 'i18next-react-components';
+
+// ...
+const MyComponent = () => {
+  return <FormattedMessage />;
+};
+```
+
+5. When you're finished developing you can unlink the project to re-point to the remote version of the package.
+
+```sh
+cd my-app
+npm unlink ../path/to/react-i18next-components
+```
