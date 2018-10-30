@@ -8,6 +8,8 @@
     "test:watch": "jest --watch",
     "build": "webpack --mode=production",
     "start": "webpack --mode=development --watch",
+    "fix:lint": "eslint . --fix",
+    "validate:lint": "eslint .",
     "prepare": "rm -rf ./dist && npm run build"
   },
   "repository": {
@@ -38,6 +40,7 @@
     "babel-preset-react": "^6.24.1",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.6.0",
+    "eslint-config-ezcater-base": "^0.1.6",
     "i18next": "^12.0.0",
     "jest": "^23.6.0",
     "react": "^16.6.0",
