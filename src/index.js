@@ -1,2 +1,2 @@
-export { default as I18nProvider } from './components/I18nProvider';
+export { default as configureI18n } from './utilities/configureI18n';
 export { default as FormattedMessage } from './components/FormattedMessage';
