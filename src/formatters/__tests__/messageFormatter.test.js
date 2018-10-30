@@ -9,5 +9,5 @@ describe('messageFormatter', () => {
 
       expect(message).toEqual(UMFORMATTED_VALUE);
     });
-  })
+  });
 });

@@ -15,6 +15,6 @@ const getI18nInstance = ({ resources }) => {
     },
     whitelist: ['en'],
   });
-}
+};
 
 export default getI18nInstance;

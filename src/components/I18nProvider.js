@@ -5,9 +5,9 @@ import getI18nInstance from '../utilities/getI18nInstance';
 const I18nProvider = ({ children, resources }) => {
   return (
     <I18nextProvider i18n={getI18nInstance({ resources })}>
-    {children}
+      {children}
     </I18nextProvider>
-  )
-}
+  );
+};
 
 export default I18nProvider;
