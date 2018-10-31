@@ -13,7 +13,7 @@ In all cases you'll need to pass in a language resource file for `en`, but you c
 The call to `configureI18n` must be made before the use of any formatting component.
 
 ```jsx
-import { configureI18n } from 'react-i18next';
+import { configureI18n } from 'react-i18next-components';
 import App from './App'; // your entry page
 import ​en from './locales/en';
 
