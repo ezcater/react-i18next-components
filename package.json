@@ -2,9 +2,20 @@
   "name": "react-i18next-components",
   "version": "0.0.1",
   "description": "A collection of React components and utilities to simplify react-i18next",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "test"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "build": "webpack --mode=production",
+    "start": "webpack --mode=development --watch",
+    "fix:lint": "eslint . --fix",
+    "validate:lint": "eslint .",
+    "prepare": "rm -rf ./dist && npm run build"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   },
   "repository": {
     "type": "git",
@@ -15,5 +26,33 @@
   "bugs": {
     "url": "https://github.com/ezcater/react-i18next-components/issues"
   },
-  "homepage": "https://github.com/ezcater/react-i18next-components#readme"
+  "homepage": "https://github.com/ezcater/react-i18next-components#readme",
+  "dependencies": {
+    "i18next": "^12.0.0",
+    "react-i18next": "^8.3.5"
+  },
+  "peerDependencies": {
+    "react": "^16.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.6.0",
+    "babel-loader": "^8.0.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.6.0",
+    "eslint-config-ezcater-base": "^0.1.6",
+    "husky": "^1.1.2",
+    "jest": "^23.6.0",
+    "prettier": "^1.14.3",
+    "pretty-quick": "^1.8.0",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
+    "webpack": "^4.23.1",
+    "webpack-cli": "^3.1.2"
+  }
 }
