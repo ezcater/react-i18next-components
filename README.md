@@ -101,7 +101,7 @@ npm link ../path/to/react-i18next-components
 ```js
 // ...
 dependencies: {
-  "i18next-react-components": "1.0.0",
+  "react-i18next-components": "1.0.0",
 }
 // ...
 ```
@@ -109,7 +109,7 @@ dependencies: {
 4. Import the components you want to test in your app.
 
 ```jsx
-import { FormattedMessage } from 'i18next-react-components';
+import { FormattedMessage } from 'react-i18next-components';
 
 // ...
 const MyComponent = () => {
