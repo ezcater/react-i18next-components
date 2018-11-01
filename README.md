@@ -22,7 +22,9 @@ const App extends React.Component {
     configureI18n({
       lng: 'en',
       resources: {
-        en,
+        en: {
+          translation: en
+        },
       }
     })
   }
