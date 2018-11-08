@@ -28,8 +28,8 @@
   },
   "homepage": "https://github.com/ezcater/react-i18next-components#readme",
   "dependencies": {
-    "i18next": "^12.0.0",
-    "react-i18next": "^8.3.5"
+    "i18next": "^11.9.1",
+    "react-i18next": "^8.0.7"
   },
   "peerDependencies": {
     "react": "^16.0.0"
