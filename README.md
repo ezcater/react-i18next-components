@@ -104,7 +104,7 @@ npm link ../path/to/react-i18next-components
 ```js
 // ...
 dependencies: {
-  "react-i18next-components": "1.0.0",
+  "react-i18next-components": "@latest",
 }
 // ...
 ```
