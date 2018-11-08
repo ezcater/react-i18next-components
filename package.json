@@ -17,9 +17,6 @@
       "pre-commit": "pretty-quick --staged"
     }
   },
-  "publishConfig": {
-    "registry": "https://ezcater.jfrog.io/ezcater/api/npm/npm/"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ezcater/react-i18next-components.git"
