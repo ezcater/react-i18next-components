@@ -17,7 +17,7 @@ const FormattedMessage = ({ t, id, options, children }) => {
     return children(translation);
   }
 
-  return <span>{translation}</span>;
+  return <React.Fragment>translation</React.Fragment>;
 };
 
 const FormattedMessageWrapper = withNamespaces()(FormattedMessage);
