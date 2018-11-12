@@ -1,10 +1,10 @@
 import React from 'react';
-import formatTime from '../formatters/formatTime';
 import { withNamespaces } from 'react-i18next';
+import formatTime from '../formatters/formatTime';
 
-const FormattedTime = ({ value, options, i18n: { lng }, children }) => {
+const FormattedTime = ({ value, options, i18n: { language }, children }) => {
   const isRenderProp = children && typeof children === 'function';
-  const translation = formatTime(value, options, lng);
+  const translation = formatTime(value, options, language);
 
   if (isRenderProp) {
     return children(translation);
@@ -13,4 +13,7 @@ const FormattedTime = ({ value, options, i18n: { lng }, children }) => {
   return <React.Fragment>{translation}</React.Fragment>;
 };
 
-export default withNamespaces()(FormattedTime);
+const FormattedTimeWrapper = withNamespaces()(FormattedTime);
+FormattedTimeWrapper.displayName = 'FormattedTime';
+
+export default FormattedTimeWrapper;

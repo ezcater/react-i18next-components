@@ -1,9 +1,10 @@
 import moment from 'moment';
 
 const formatDate = (value, options = { format: 'LL' }, locale) => {
-  return moment(value)
-    .locale(locale)
-    .format(options.format);
+  const instance = moment();
+  instance.locale(locale);
+
+  return instance.format(options.format);
 };
 
 export default formatDate;
