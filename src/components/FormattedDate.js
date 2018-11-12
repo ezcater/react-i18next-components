@@ -1,7 +1,7 @@
 import React from 'react';
 import formatDate from '../formatters/formatDate';
 
-const FormattedDate = ({ t, value, options, children }) => {
+const FormattedDate = ({ value, options, children }) => {
   const isRenderProp = children && typeof children === 'function';
   const translation = formatDate(value, options);
 

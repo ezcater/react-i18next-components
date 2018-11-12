@@ -1,7 +1,7 @@
 import React from 'react';
 import formatTime from '../formatters/formatTime';
 
-const FormattedTime = ({ t, value, options, children }) => {
+const FormattedTime = ({ value, options, children }) => {
   const isRenderProp = children && typeof children === 'function';
   const translation = formatTime(value, options);
 
