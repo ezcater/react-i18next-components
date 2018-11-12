@@ -1,11 +1,11 @@
-import messageFormatter from '../messageFormatter';
+import formatMessage from '../formatMessage';
 
 const UNFORMATTED_VALUE = 'hello';
 
-describe('messageFormatter', () => {
+describe('formatMessage', () => {
   describe('when passed a string to format', () => {
     it('returns the string back', () => {
-      const message = messageFormatter(UNFORMATTED_VALUE);
+      const message = formatMessage(UNFORMATTED_VALUE);
 
       expect(message).toEqual(UNFORMATTED_VALUE);
     });
