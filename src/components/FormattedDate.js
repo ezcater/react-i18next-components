@@ -1,9 +1,9 @@
 import React from 'react';
-import formatTime from '../formatters/formatTime';
+import formatDate from '../formatters/formatDate';
 
-const FormattedTime = ({ t, value, options, children }) => {
+const FormattedDate = ({ t, value, options, children }) => {
   const isRenderProp = children && typeof children === 'function';
-  const translation = formatTime(value, options);
+  const translation = formatDate(value, options);
 
   if (isRenderProp) {
     return children(translation);
@@ -12,4 +12,4 @@ const FormattedTime = ({ t, value, options, children }) => {
   return <React.Fragment>{translation}</React.Fragment>;
 };
 
-export default FormattedTime;
+export default FormattedDate;
