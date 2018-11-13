@@ -12,11 +12,6 @@ module.exports = {
     publicPath: '/dist/',
     umdNamedDefine: true,
   },
-  node: {
-    net: 'empty',
-    tls: 'empty',
-    dns: 'empty',
-  },
   module: {
     rules: [
       {
