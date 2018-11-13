@@ -64,17 +64,29 @@ import FormattedMessage from 'react-i18next-components';
 
 ### FormattedMessage
 
+| Prop Name | Type   |
+| --------- | ------ |
+| id        | String |
+| options   | Object |
+
 ```jsx
 import { FormattedMessage } from 'react-i18next-components';
 
 <FormattedMesage id="path.to.hello" />;
 
-// "hello"
+// "Hello"
+
+<FormattedMesage id="path.to.hello" options={{ name: 'Alec' }} />;
+
+// "Hello Alec"
 ```
 
 ### FormattedTime
 
-Accepts any value and formatting option supported by [moment.js](https://momentjs.com/docs/#/parsing/).
+| Prop Name | Type                                                                                                  |
+| --------- | ----------------------------------------------------------------------------------------------------- |
+| value     | Any string supported by [moment.js](https://momentjs.com/docs/#/parsing/).                            |
+| format    | Any localized format string supported by [moment.js](https://momentjs.com/docs/#/displaying/format/). |
 
 ```jsx
 import { FormattedTime } from 'react-i18next-components';
@@ -83,14 +95,16 @@ import { FormattedTime } from 'react-i18next-components';
 
 // "5:00 PM"
 
-<FormattedTime value={Date.now()} option={{ format: 'LTS' }} />;
+<FormattedTime value={Date.now()} format="LTS" />;
 
 // "5:00:00 PM"
 ```
 
 ### FormattedRelativeTime
 
-Accepts any value supported by [moment.js](https://momentjs.com/docs/#/parsing/).
+| Prop Name | Type                                                                       |
+| --------- | -------------------------------------------------------------------------- |
+| value     | Any string supported by [moment.js](https://momentjs.com/docs/#/parsing/). |
 
 ```jsx
 import { FormattedRelativeTime } from 'react-i18next-components';
@@ -102,7 +116,10 @@ import { FormattedRelativeTime } from 'react-i18next-components';
 
 ### FormattedDate
 
-Accepts any value and formatting option supported by [moment.js](https://momentjs.com/docs/#/parsing/).
+| Prop Name | Type                                                                                                  |
+| --------- | ----------------------------------------------------------------------------------------------------- |
+| value     | Any string supported by [moment.js](https://momentjs.com/docs/#/parsing/).                            |
+| format    | Any localized format string supported by [moment.js](https://momentjs.com/docs/#/displaying/format/). |
 
 ```jsx
 import { FormattedDate } from 'react-i18next-components';
@@ -111,7 +128,7 @@ import { FormattedDate } from 'react-i18next-components';
 
 // "December 1, 2018"
 
-<FormattedDate value={Date.now()} options={{ format: 'l' }} />;
+<FormattedDate value={Date.now()} format="l" />;
 
 // 12/01/2018
 ```

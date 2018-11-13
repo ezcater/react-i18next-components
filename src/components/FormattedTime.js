@@ -2,9 +2,9 @@ import React from 'react';
 import { withNamespaces } from 'react-i18next';
 import formatTime from '../formatters/formatTime';
 
-const FormattedTime = ({ value, options, i18n: { language }, children }) => {
+const FormattedTime = ({ value, format, i18n: { language }, children }) => {
   const isRenderProp = children && typeof children === 'function';
-  const translation = formatTime(value, { ...options, locale: language });
+  const translation = formatTime(value, { format, locale: language });
 
   if (isRenderProp) {
     return children(translation);

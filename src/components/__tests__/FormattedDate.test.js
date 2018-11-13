@@ -12,16 +12,19 @@ formatDate.mockImplementation(() => EXPECTED_FORMAT);
 describe('<FormattedDate />', () => {
   describe('when the component is passed no child', () => {
     it('calls format with the correct arguments', () => {
-      const wrapper = mount(<FormattedDate value={DATE_TIME_INPUT} />);
+      const wrapper = mount(
+        <FormattedDate value={DATE_TIME_INPUT} format="l" />
+      );
 
       expect(formatDate).toHaveBeenCalledWith(DATE_TIME_INPUT, {
+        format: 'l',
         locale: 'en',
       });
     });
 
     it('renders a fragment with the correct formatting', () => {
       const wrapper = mount(<FormattedDate value={DATE_TIME_INPUT} />);
-      console.log(wrapper.debug());
+
       expect(wrapper.contains(EXPECTED_FORMAT)).toEqual(true);
     });
   });

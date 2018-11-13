@@ -2,15 +2,9 @@ import React from 'react';
 import { withNamespaces } from 'react-i18next';
 import formatRelativeTime from '../formatters/formatRelativeTime';
 
-const FormattedRelativeTime = ({
-  value,
-  options,
-  i18n: { language },
-  children,
-}) => {
+const FormattedRelativeTime = ({ value, i18n: { language }, children }) => {
   const isRenderProp = children && typeof children === 'function';
   const translation = formatRelativeTime(value, {
-    ...options,
     locale: language,
   });
 

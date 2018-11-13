@@ -12,9 +12,12 @@ formatTime.mockImplementation(() => EXPECTED_FORMAT);
 describe('<FormattedTime />', () => {
   describe('when the component is passed no child', () => {
     it('calls format with the correct arguments', () => {
-      const wrapper = mount(<FormattedTime value={DATE_TIME_INPUT} />);
+      const wrapper = mount(
+        <FormattedTime value={DATE_TIME_INPUT} format="LTS" />
+      );
 
       expect(formatTime).toHaveBeenCalledWith(DATE_TIME_INPUT, {
+        format: 'LTS',
         locale: 'en',
       });
     });
