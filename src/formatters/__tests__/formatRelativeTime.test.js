@@ -1,26 +1,20 @@
-import formatDate from '../formatDate';
+import formatRelativeTime from '../formatRelativeTime';
 
 const DATE_TIME_INPUT = '2017-10-23T13:08:05-04:00';
 const testCases = [
   {
     options: undefined,
-    expected: 'October 23, 2017',
-  },
-  {
-    options: { format: 'l' },
-    expected: '10/23/2017',
-  },
-  {
-    options: { format: 'L' },
-    expected: '10/23/2017',
+    expected: 'a year ago',
   },
 ];
 
-describe('formatDate', () => {
+describe('formatRelativeTime', () => {
   testCases.forEach(testCase => {
     describe(`when passed options: ${testCase.options}`, () => {
       it(`returns ${testCase.expected}`, () => {
-        formatDate();
+        const formatted = formatRelativeTime(DATE_TIME_INPUT, testCase.options);
+
+        expect(formatted).toEqual(testCase.expected);
       });
     });
   });

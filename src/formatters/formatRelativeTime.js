@@ -1,9 +1,10 @@
 import moment from 'moment';
 
 const formatRelativeTime = (value, options, locale) => {
-  return moment()
-    .locale(locale)
-    .to(value);
+  const instance = moment();
+  instance.locale(locale);
+
+  return instance.to(value);
 };
 
 export default formatRelativeTime;
