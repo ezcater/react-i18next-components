@@ -4,7 +4,7 @@ import formatTime from '../formatters/formatTime';
 
 const FormattedTime = ({ value, options, i18n: { language }, children }) => {
   const isRenderProp = children && typeof children === 'function';
-  const translation = formatTime(value, options, language);
+  const translation = formatTime(value, { ...options, locale: language });
 
   if (isRenderProp) {
     return children(translation);
