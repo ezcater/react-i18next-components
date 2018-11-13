@@ -9,7 +9,10 @@ const FormattedRelativeTime = ({
   children,
 }) => {
   const isRenderProp = children && typeof children === 'function';
-  const translation = formatRelativeTime(value, options, language);
+  const translation = formatRelativeTime(value, {
+    ...options,
+    locale: language,
+  });
 
   if (isRenderProp) {
     return children(translation);
