@@ -2,7 +2,7 @@
 
 A collection of React components and utilities to simplify react-i18next.
 
-## Getting Started
+## Getting Started:
 
 ### configureI18n
 
@@ -36,7 +36,9 @@ const App extends React.Component {
 );
 ```
 
-## Formatting components
+## How to use:
+
+Elements can either be used by themeselves which will render a React fragment with the formatted content or with the render prop pattern to inject formatting into elements like text inputs.
 
 ### Standalone
 
@@ -53,9 +55,65 @@ import FormattedMessage from 'react-i18next-components';
 
 <FormattedMesage id="path.to.key">
   {text => (
-    <input placeholder={text} />
+    <input type="text" placeholder={text} />
   )}
 </FormattedMessage>
+```
+
+## Components:
+
+### FormattedMessage
+
+```jsx
+import { FormattedMessage } from 'react-i18next-components';
+
+<FormattedMesage id="path.to.hello" />;
+
+// "hello"
+```
+
+### FormattedTime
+
+Accepts any value and formatting option supported by [moment.js](https://momentjs.com/docs/#/parsing/).
+
+```jsx
+import { FormattedTime } from 'react-i18next-components';
+
+<FormattedTime value={Date.now()} />;
+
+// "5:00 PM"
+
+<FormattedTime value={Date.now()} option={{ format: 'LTS' }} />;
+
+// "5:00:00 PM"
+```
+
+### FormattedRelativeTime
+
+Accepts any value supported by [moment.js](https://momentjs.com/docs/#/parsing/).
+
+```jsx
+import { FormattedRelativeTime } from 'react-i18next-components';
+
+<FormattedRelativeTime value={1544227200} />;
+
+// "in 7 days"
+```
+
+### FormattedDate
+
+Accepts any value and formatting option supported by [moment.js](https://momentjs.com/docs/#/parsing/).
+
+```jsx
+import { FormattedDate } from 'react-i18next-components';
+
+<FormattedDate value={Date.now()} />;
+
+// "December 1, 2018"
+
+<FormattedDate value={Date.now()} options={{ format: 'l' }} />;
+
+// 12/01/2018
 ```
 
 ## Contributing
