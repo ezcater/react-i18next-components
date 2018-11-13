@@ -10,6 +10,10 @@ const testCases = [
     options: { format: 'LTS' },
     expected: '1:08:05 PM',
   },
+  {
+    options: { locale: 'fr' },
+    expected: '13:08',
+  },
 ];
 
 describe('formatTime', () => {

@@ -14,6 +14,10 @@ const testCases = [
     options: { format: 'L' },
     expected: '10/23/2017',
   },
+  {
+    options: { locale: 'fr' },
+    expected: '23 octobre 2017',
+  },
 ];
 
 describe('formatDate', () => {

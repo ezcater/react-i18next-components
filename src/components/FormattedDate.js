@@ -4,7 +4,6 @@ import formatDate from '../formatters/formatDate';
 
 const FormattedDate = ({ value, options, i18n: { language }, children }) => {
   const isRenderProp = children && typeof children === 'function';
-  debugger;
   const translation = formatDate(value, options, language);
 
   if (isRenderProp) {

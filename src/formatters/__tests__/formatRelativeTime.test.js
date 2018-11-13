@@ -6,6 +6,10 @@ const testCases = [
     options: undefined,
     expected: 'a year ago',
   },
+  {
+    options: { locale: 'fr' },
+    expected: 'il y a un an',
+  },
 ];
 
 describe('formatRelativeTime', () => {
