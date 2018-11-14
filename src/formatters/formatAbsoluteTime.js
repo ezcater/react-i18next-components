@@ -1,8 +1,8 @@
 import moment from 'moment';
 import { EN } from '../constants/locales';
 
-const formatDate = (value, options = {}) => {
-  const { locale = EN, format = 'LL' } = options;
+const formatAbsoluteTime = (value, options = {}) => {
+  const { locale = EN, format = 'LT' } = options;
   const instance = moment(value);
 
   instance.locale(locale);
@@ -10,4 +10,4 @@ const formatDate = (value, options = {}) => {
   return instance.format(format);
 };
 
-export default formatDate;
+export default formatAbsoluteTime;

@@ -110,7 +110,7 @@ import { FormattedDate } from 'react-i18next-components';
 
 ### FormattedTime
 
-Given a `value` prop in any timestamp format, the component will render a formatted date or time in any format supported by moment.js. This component is similar to `FormattedDate` but it's default will be to render only a time instead of a date.
+Given a `value` prop in any timestamp format, the component will render a formatted date or time in any format supported by moment.js. This component is similar to `FormattedDate` but it's default will be to render a time instead of a date.
 
 | Prop Name | Type                                                                                                  |
 | --------- | ----------------------------------------------------------------------------------------------------- |
