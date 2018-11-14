@@ -38,9 +38,9 @@ const App extends React.Component {
 
 ## How to use:
 
-Elements can either be used by themeselves which will render a React fragment with the formatted content or with the render prop pattern to inject formatting into elements like text inputs.
+All formatting elements can either be used by themeselves which will render a React fragment with the formatted content or with the render prop pattern to inject formatting into elements like text inputs.
 
-### Standalone
+### Use as standalone component:
 
 ```jsx
 import FormattedMessage from 'react-i18next-components';
@@ -48,7 +48,7 @@ import FormattedMessage from 'react-i18next-components';
 <FormattedMesage id="path.to.key" />;
 ```
 
-### Render prop
+### Use with render prop:
 
 ```jsx
 import FormattedMessage from 'react-i18next-components';
