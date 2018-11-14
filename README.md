@@ -64,6 +64,8 @@ import FormattedMessage from 'react-i18next-components';
 
 ### FormattedMessage
 
+Given an `id` prop which indicates the path to the translation in your language file, the component will render the correct translation.
+
 | Prop Name | Type   |
 | --------- | ------ |
 | id        | String |
@@ -81,7 +83,34 @@ import { FormattedMessage } from 'react-i18next-components';
 // "Hello Alec"
 ```
 
+### FormattedDate
+
+Given a `value` prop in any timestamp format, the component will render a formatted date or time in any format supported by moment.js. By default this component will render a date.
+
+| Prop Name | Type                                                                                                  |
+| --------- | ----------------------------------------------------------------------------------------------------- |
+| value     | Any string supported by [moment.js](https://momentjs.com/docs/#/parsing/).                            |
+| format    | Any localized format string supported by [moment.js](https://momentjs.com/docs/#/displaying/format/). |
+
+```jsx
+import { FormattedDate } from 'react-i18next-components';
+
+<FormattedDate value={Date.now()} />;
+
+// "December 1, 2018"
+
+<FormattedDate value={Date.now()} format="l" />;
+
+// "12/01/2018"
+
+<FormattedDate value={Date.now()} format="LLL" />;
+
+// "December 1, 2018 1:08 PM"
+```
+
 ### FormattedTime
+
+Given a `value` prop in any timestamp format, the component will render a formatted date or time in any format supported by moment.js. This component is similar to `FormattedDate` but it's default will be to render only a time instead of a date.
 
 | Prop Name | Type                                                                                                  |
 | --------- | ----------------------------------------------------------------------------------------------------- |
@@ -102,6 +131,8 @@ import { FormattedTime } from 'react-i18next-components';
 
 ### FormattedRelativeTime
 
+Given a `value` prop in any timestamp format, the component will render a human readable string displaying the relative time to the current time regardless of whether it's in the past or future. This string will automatically be translated based on the locale passed to `lng` on initialization.
+
 | Prop Name | Type                                                                       |
 | --------- | -------------------------------------------------------------------------- |
 | value     | Any string supported by [moment.js](https://momentjs.com/docs/#/parsing/). |
@@ -112,25 +143,6 @@ import { FormattedRelativeTime } from 'react-i18next-components';
 <FormattedRelativeTime value={1544227200} />;
 
 // "in 7 days"
-```
-
-### FormattedDate
-
-| Prop Name | Type                                                                                                  |
-| --------- | ----------------------------------------------------------------------------------------------------- |
-| value     | Any string supported by [moment.js](https://momentjs.com/docs/#/parsing/).                            |
-| format    | Any localized format string supported by [moment.js](https://momentjs.com/docs/#/displaying/format/). |
-
-```jsx
-import { FormattedDate } from 'react-i18next-components';
-
-<FormattedDate value={Date.now()} />;
-
-// "December 1, 2018"
-
-<FormattedDate value={Date.now()} format="l" />;
-
-// 12/01/2018
 ```
 
 ## Contributing
