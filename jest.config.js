@@ -5,4 +5,7 @@ module.exports = {
   clearMocks: true,
   coverageDirectory: 'coverage',
   setupTestFrameworkScriptFile: '<rootDir>test/setupTests.js',
+  transform: {
+    '^.+\\.jsx?$': 'babel-jest',
+  },
 };

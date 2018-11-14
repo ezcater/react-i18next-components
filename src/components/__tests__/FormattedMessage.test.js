@@ -1,7 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import FormattedMessage from '../components/FormattedMessage';
-import mockI18nextWithValue from '../../test/mockI18nextWithValue';
+import FormattedMessage from '../FormattedMessage';
 
 const MOCKED_RETURN_VALUE = 'hello';
 
@@ -20,9 +19,7 @@ describe('<FormattedMessage />', () => {
     it('renders a fragment with the correct text', () => {
       const wrapper = mount(<FormattedMessage id="key" />);
 
-      expect(wrapper.contains(<span>{MOCKED_RETURN_VALUE}</span>)).toEqual(
-        true
-      );
+      expect(wrapper.contains(MOCKED_RETURN_VALUE)).toEqual(true);
     });
   });
 
