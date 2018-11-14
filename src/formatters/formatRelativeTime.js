@@ -1,7 +1,8 @@
 import moment from 'moment';
+import { EN } from '../constants/locales';
 
 const formatRelativeTime = (value, options = {}) => {
-  const { locale = 'en' } = options;
+  const { locale = EN } = options;
   const instance = moment();
 
   instance.locale(locale);
