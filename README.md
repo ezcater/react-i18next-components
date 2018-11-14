@@ -2,7 +2,7 @@
 
 A collection of React components and utilities to simplify react-i18next.
 
-## Getting Started
+## Getting Started:
 
 ### configureI18n
 
@@ -36,9 +36,11 @@ const App extends React.Component {
 );
 ```
 
-## Formatting components
+## How to use:
 
-### Standalone
+All formatting elements can either be used by themeselves which will render a React fragment with the formatted content or with the render prop pattern to inject formatting into elements like text inputs.
+
+### Use as standalone component:
 
 ```jsx
 import FormattedMessage from 'react-i18next-components';
@@ -46,16 +48,101 @@ import FormattedMessage from 'react-i18next-components';
 <FormattedMesage id="path.to.key" />;
 ```
 
-### Render prop
+### Use with render prop:
 
 ```jsx
 import FormattedMessage from 'react-i18next-components';
 
 <FormattedMesage id="path.to.key">
   {text => (
-    <input placeholder={text} />
+    <input type="text" placeholder={text} />
   )}
 </FormattedMessage>
+```
+
+## Components:
+
+### FormattedMessage
+
+Given an `id` prop which indicates the path to the translation in your language file, the component will render the correct translation.
+
+| Prop Name | Type   |
+| --------- | ------ |
+| id        | String |
+| options   | Object |
+
+```jsx
+import { FormattedMessage } from 'react-i18next-components';
+
+<FormattedMesage id="path.to.hello" />;
+
+// "Hello"
+
+<FormattedMesage id="path.to.hello" options={{ name: 'Alec' }} />;
+
+// "Hello Alec"
+```
+
+### FormattedDate
+
+Given a `value` prop in any timestamp format, the component will render a formatted date or time in any format supported by moment.js. By default this component will render a date.
+
+| Prop Name | Type                                                                                                  |
+| --------- | ----------------------------------------------------------------------------------------------------- |
+| value     | Any string supported by [moment.js](https://momentjs.com/docs/#/parsing/).                            |
+| format    | Any localized format string supported by [moment.js](https://momentjs.com/docs/#/displaying/format/). |
+
+```jsx
+import { FormattedDate } from 'react-i18next-components';
+
+<FormattedDate value={Date.now()} />;
+
+// "December 1, 2018"
+
+<FormattedDate value={Date.now()} format="l" />;
+
+// "12/01/2018"
+
+<FormattedDate value={Date.now()} format="LLL" />;
+
+// "December 1, 2018 1:08 PM"
+```
+
+### FormattedTime
+
+Given a `value` prop in any timestamp format, the component will render a formatted date or time in any format supported by moment.js. This component is similar to `FormattedDate` but it's default will be to render a time instead of a date.
+
+| Prop Name | Type                                                                                                  |
+| --------- | ----------------------------------------------------------------------------------------------------- |
+| value     | Any string supported by [moment.js](https://momentjs.com/docs/#/parsing/).                            |
+| format    | Any localized format string supported by [moment.js](https://momentjs.com/docs/#/displaying/format/). |
+
+```jsx
+import { FormattedTime } from 'react-i18next-components';
+
+<FormattedTime value={Date.now()} />;
+
+// "5:00 PM"
+
+<FormattedTime value={Date.now()} format="LTS" />;
+
+// "5:00:00 PM"
+```
+
+### FormattedRelativeTime
+
+Given a `value` prop in any timestamp format, the component will render a human readable string displaying the relative time to the current time regardless of whether it's in the past or future. This string will automatically be translated based on the locale passed to `lng` on initialization.
+
+| Prop Name | Type                                                                       |
+| --------- | -------------------------------------------------------------------------- |
+| value     | Any string supported by [moment.js](https://momentjs.com/docs/#/parsing/). |
+
+```jsx
+import { FormattedRelativeTime } from 'react-i18next-components';
+
+<FormattedRelativeTime value={1544227200} />;
+
+// "in 7 days"
 ```
 
 ## Contributing

@@ -1,11 +1,11 @@
 import React from 'react';
 import { withNamespaces } from 'react-i18next';
-import messageFormatter from '../formatters/messageFormatter';
+import formatMessage from '../formatters/formatMessage';
 
 const getTranslation = ({ t, id, options }) => {
   return t(id, {
     ...options,
-    interpolation: { format: messageFormatter },
+    interpolation: { format: formatMessage },
   });
 };
 
