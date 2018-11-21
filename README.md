@@ -43,7 +43,7 @@ All formatting elements can either be used by themeselves which will render a Re
 ### Use as standalone component:
 
 ```jsx
-import FormattedMessage from 'react-i18next-components';
+import { FormattedMessage } from 'react-i18next-components';
 
 <FormattedMesage id="path.to.key" />;
 ```
@@ -51,7 +51,7 @@ import FormattedMessage from 'react-i18next-components';
 ### Use with render prop:
 
 ```jsx
-import FormattedMessage from 'react-i18next-components';
+import { FormattedMessage } from 'react-i18next-components';
 
 <FormattedMesage id="path.to.key">
   {text => (
