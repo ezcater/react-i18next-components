@@ -1,9 +1,7 @@
-const MOCKED_RETURN_VALUE = 'hello';
-
 export const withNamespaces = () => Component => {
   Component.defaultProps = {
     ...Component.defaultProps,
-    t: () => MOCKED_RETURN_VALUE,
+    t: (id, args) => `key: ${id} options: ${JSON.stringify(args)}`,
     i18n: {
       language: 'en',
     },
