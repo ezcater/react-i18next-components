@@ -85,7 +85,7 @@ import { FormattedMessage } from 'react-i18next-components';
 
 ### FormattedDictionary
 
-Given any number of props each of which contain a path to a translation in your language file, the component will pass data in the same shape as the props to a render props function. **This component only supports the render props pattern**.
+Given any number of props each of which contain a path to a translation in your language file, the component will pass data in the same shape as the props to a child function. **This component only supports the render prop pattern**.
 
 | Prop Name | Type   |
 | --------- | ------ |
