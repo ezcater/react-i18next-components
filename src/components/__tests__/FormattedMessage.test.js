@@ -5,7 +5,7 @@ import FormattedMessage from '../FormattedMessage';
 describe('<FormattedMessage />', () => {
   describe('when the component is passed no child', () => {
     it('renders a fragment with the correct text', () => {
-      const MOCKED_RETURN_VALUE = 'key: key options: undefined';
+      const MOCKED_RETURN_VALUE = 'key: key options: {}';
       const wrapper = mount(<FormattedMessage id="key" />);
 
       expect(wrapper.contains(MOCKED_RETURN_VALUE)).toEqual(true);
@@ -25,7 +25,7 @@ describe('<FormattedMessage />', () => {
 
   describe('when the component is passed a function as a child', () => {
     it('renders the return of the function with the correct text', () => {
-      const MOCKED_RETURN_VALUE = 'key: key options: undefined';
+      const MOCKED_RETURN_VALUE = 'key: key options: {}';
       const wrapper = mount(
         <FormattedMessage id="key">{text => <p>{text}</p>}</FormattedMessage>
       );

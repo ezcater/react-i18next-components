@@ -11,7 +11,7 @@ const getTranslation = ({ t, id, options }) => {
 
 const FormattedMessage = ({ t, id, options, children }) => {
   const isRenderProp = children && typeof children === 'function';
-  const translation = t(id, options);
+  const translation = getTranslation({ t, id, options });
 
   if (isRenderProp) {
     return children(translation);
