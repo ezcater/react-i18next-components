@@ -5,9 +5,9 @@ const looksLikeTranslation = value => typeof value === 'string';
 const FormattedDictionary = ({ t, options = {}, children, ...ids }) => {
   const translations = {};
 
-  Object.entries(ids).forEach(([key, value]) => {
-    if (looksLikeTranslation(value))
-      translations[key] = t(value, options[key] || {});
+  Object.keys(ids).forEach(key => {
+    if (looksLikeTranslation(ids[key]))
+      translations[key] = t(ids[key], options[key] || {});
   });
 
   return children(translations);
