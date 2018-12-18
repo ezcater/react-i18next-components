@@ -1,5 +1,1 @@
-const messageFormatter = message => {
-  return message;
-};
-
-export default messageFormatter;
+export default (t, id, options = {}) => t(id, options);
