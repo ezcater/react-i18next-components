@@ -83,6 +83,31 @@ import { FormattedMessage } from 'react-i18next-components';
 // "Hello Alec"
 ```
 
+### FormattedDictionary
+
+Given any number of props each of which contain a path to a translation in your language file, the component will pass data in the same shape as the props to a child function. **This component only supports the render prop pattern**.
+
+| Prop Name | Type   |
+| --------- | ------ |
+| ...       | String |
+| options   | Object |
+
+```jsx
+import { FormattedDictionary } from 'react-i18next-components';
+
+<FormattedDictionary greeting="path.to.hello" closing="path.to.goodbye">
+  {({greeting, closing}) => <p>{greeting}, {closing}</p>}
+</FormattedDictionary>
+
+// Hello, Goodbye
+
+<FormattedDictionary greeting="path.to.hello" closing="path.to.goodbye" options={{ greeting: {name: 'Alec' }}}>
+  {({greeting, closing}) => <p>{greeting}, {closing}</p>}
+</FormattedDictionary>
+
+// Hello Alec, Goodbye
+```
+
 ### FormattedDate
 
 Given a `value` prop in any timestamp format, the component will render a formatted date or time in any format supported by moment.js. By default this component will render a date.

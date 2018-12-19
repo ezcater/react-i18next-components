@@ -2,16 +2,9 @@ import React from 'react';
 import { withNamespaces } from 'react-i18next';
 import formatMessage from '../formatters/formatMessage';
 
-const getTranslation = ({ t, id, options }) => {
-  return t(id, {
-    ...options,
-    interpolation: { format: formatMessage },
-  });
-};
-
 const FormattedMessage = ({ t, id, options, children }) => {
   const isRenderProp = children && typeof children === 'function';
-  const translation = t(id, options);
+  const translation = formatMessage(t, id, options);
 
   if (isRenderProp) {
     return children(translation);
