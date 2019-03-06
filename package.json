@@ -31,6 +31,7 @@
   "dependencies": {
     "i18next": "^11.9.1",
     "moment": "^2.22.2",
+    "moment-timezone": "^0.5.23",
     "react-i18next": "^8.0.7"
   },
   "peerDependencies": {

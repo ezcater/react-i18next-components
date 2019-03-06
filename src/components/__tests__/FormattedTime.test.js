@@ -22,12 +22,17 @@ describe('<FormattedTime />', () => {
 
     it('calls format with the correct arguments with a passed in format', () => {
       const wrapper = mount(
-        <FormattedTime value={DATE_TIME_INPUT} format="LTS" />
+        <FormattedTime
+          value={DATE_TIME_INPUT}
+          format="LTS"
+          timezone="America/Los_Angeles"
+        />
       );
 
       expect(formatAbsoluteTime).toHaveBeenCalledWith(DATE_TIME_INPUT, {
         format: 'LTS',
         locale: 'en',
+        timezone: 'America/Los_Angeles',
       });
     });
 
