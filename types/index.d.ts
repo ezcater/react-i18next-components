@@ -8,18 +8,21 @@ interface FormattedMessageProps {
 }
 
 interface FormattedDictionaryProps {
-  children: (value: any) => React.ReactElement<any>;
+  children?: (value: any) => React.ReactElement<any>;
   options?: any;
   [props: string]: any;
 }
 
 interface FormattedDateTimeProps {
-  format?: String;
-  value: Number | String | Moment;
+  children?: (value: any) => React.ReactElement<any>;
+  format?: string;
+  timezone?: string;
+  value: number | string | Moment;
 }
 
 interface FormattedRelativeTimeProps {
-  value: Number | String | Moment;
+  children?: (value: any) => React.ReactElement<any>;
+  value: number | string | Moment;
 }
 
 export function FormattedMessage(
