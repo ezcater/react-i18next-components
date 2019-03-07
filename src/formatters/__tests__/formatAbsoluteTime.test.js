@@ -35,8 +35,8 @@ const testCases = [
     expected: '23 octobre 2017',
   },
   {
-    expected: '10:08 AM PDT',
     options: { format: 'LT', timezone: 'America/Los_Angeles' },
+    expected: '10:08 AM PDT',
   },
 ];
 
