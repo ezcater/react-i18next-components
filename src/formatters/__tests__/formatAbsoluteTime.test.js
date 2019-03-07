@@ -34,6 +34,10 @@ const testCases = [
     options: { locale: 'fr', format: 'LL' },
     expected: '23 octobre 2017',
   },
+  {
+    options: { format: 'LT', timezone: 'America/Los_Angeles' },
+    expected: '10:08 AM PDT',
+  },
 ];
 
 describe('formatAbsoluteTime', () => {
