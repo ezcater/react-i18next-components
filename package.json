@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/ezcater/react-i18next-components#readme",
   "dependencies": {
-    "i18next": "^11.9.1",
+    "i18next": "^19.4.3",
     "moment": "^2.22.2",
     "moment-timezone": "^0.5.23",
     "react-i18next": "^8.0.7"
